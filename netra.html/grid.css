@@ -1,0 +1,51 @@
+.container{
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "siderbar content ads"
+    "footer footer footer";
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 50px 200px 50px;
+    gap: 5px;
+}
+.header{
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+    grid-area: header;
+}
+.sidebar{
+    background-color: bisque;
+    padding: 10px;
+    grid-area: siderbar;
+}
+.content{
+    background-color: seashell;
+    padding: 10px;
+    grid-area:Main Content;
+}
+.ads{
+    background-color: gainsboro;
+    padding: 10px;
+    grid-area: Ads;
+}
+.footer{
+    background-color: silver;
+    padding: 10px;
+    grid-area: Footer;
+    text-align: center;
+}
+.item{
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.transition{
+    transition: all;
+    transition-duration: 3s;
+}
+#submitbtn:hover{
+    background-color: Red;
+    transform: ;
+}
