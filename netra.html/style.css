@@ -1,77 +1,176 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar{
-    background-color: black;
-    height: 125px;
+body {
+    background-color: #0b1220;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #f4f7fb;
+    min-height: 125px;
     display: flex;
     align-items: center;
     padding: 0 30px;
-    border-bottom: 2px solid black;
-    padding: 0 20px;
+    border-bottom: 2px solid #1e293b;
 }
 
-.brand-section{
+.brand-section {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.logo{
+.logo {
     color: #50b5ff;
     font-size: 80px;
     font-weight: bold;
-    font-family: 'Arial', sans-serif;
 }
 
-.brand-name{
+.brand-name {
     color: #64baff;
     font-size: 55px;
-    font-family: 'Arial', sans-serif;
 }
 
-.title-section{
+.title-section {
     margin-left: 40px;
 }
 
-.title-section h2{
+.title-section h2 {
     color: white;
-    font-size: 40px;
+    font-size: 35px;
 }
 
-.title-section p{
-    color: white;
-    font-size: 22px;
+.title-section p {
+    color: #91a8c5;
+    font-size: 18px;
+    margin-top: 8px;
 }
 
-.right-section{
+.right-section {
     display: flex;
     align-items: center;
     margin-left: auto;
     gap: 30px;
 }
 
-.status{
+.status {
     color: #16e9a1;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.status-dot{
+.status-dot {
     display: inline-block;
     background-color: #16e9a1;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
+    margin-right: 6px;
 }
-.dispatch-btn{
+
+.dispatch-btn {
     background-color: #087bff;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     padding: 15px 25px;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
+.dispatch-btn:hover {
+    background-color: #0056c7;
+}
+
+/* MAIN DASHBOARD */
+.page {
+    padding: 40px 5%;
+}
+
+/* KPI GRID */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+/* INDIVIDUAL KPI CARDS */
+.kpi-card {
+    background: linear-gradient(145deg, #17243a, #101a2b);
+    border: 1px solid #263b59;
+    border-radius: 16px;
+    padding: 25px;
+    min-height: 180px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* CARD HOVER EFFECT */
+.kpi-card:hover {
+    transform: translateY(-5px);
+    border-color: #50b5ff;
+    box-shadow: 0 8px 25px rgba(80, 181, 255, 0.15);
+}
+
+/* CARD LABEL */
+.kpi-card span {
+    color: #91a8c5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* CARD VALUE */
+.kpi-card h2 {
+    color: #50b5ff;
+    font-size: 38px;
+    margin: 18px 0 10px;
+}
+
+/* CARD DESCRIPTION */
+.kpi-card p {
+    color: #91a8c5;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1000px) {
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .brand-name {
+        font-size: 35px;
+    }
+
+    .logo {
+        font-size: 50px;
+    }
+
+    .title-section {
+        margin-left: 10px;
+    }
+
+    .right-section {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}

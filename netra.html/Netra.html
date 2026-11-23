@@ -1,33 +1,237 @@
 <!DOCTYPE html>
-<html lang ="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NETRA</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
+<html lang="en">
 
-    </head>
-    <body>
-        <header class="navbar">
-            <!--Left Section: Logo and Branding-->
-            <div class="brand-section">
-                <div class="logo">N</div>
-                <h1 class="brand-name">NETRA</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETRA - Mission Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+
+        <div class="brand-section">
+            <div class="logo">N</div>
+            <h1 class="brand-name">NETRA</h1>
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <nav class="nav-menu">
+
+            <button class="nav-btn active"
+                onclick="showSection('dashboard', this)">
+                Dashboard
+            </button>
+
+            <button class="nav-btn"
+                onclick="showSection('fleet', this)">
+                Fleet
+            </button>
+
+            <button class="nav-btn"
+                onclick="showSection('telemetry', this)">
+                Telemetry
+            </button>
+
+            <button class="nav-btn"
+                onclick="showSection('alerts', this)">
+                Alerts
+            </button>
+
+        </nav>
+
+        <div class="right-section">
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Live - Simulated Telemetry
             </div>
-            <!--Middle Section: Title and Subtitle-->
-            <div class="title-section">
-                <h2>- Mission Control</h2>
-                <p>Smart Rover Fleet. Inteligent Campus.</p>
+
+            <button class="dispatch-btn"
+                onclick="alert('Mission dispatch selected!')">
+                Dispatch Mission
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="page">
+
+        <!-- DASHBOARD SECTION -->
+        <section id="dashboard" class="content-section">
+
+            <div class="section-heading">
+                <h2>Dashboard Overview</h2>
+                <p>Monitor your smart rover fleet.</p>
             </div>
-            <!--Right Section: Status and Buttons-->
-            <div class="right-section">
-                <div class="status">
-                    <span class="Status-dot"> Live- Simulated Telemetry</span>
+
+            <div class="kpi-grid">
+
+                <article class="kpi-card">
+                    <span>ROVERS ONLINE</span>
+                    <h2>6 / 6</h2>
+                    <p>Active rover units</p>
+                </article>
+
+                <article class="kpi-card">
+                    <span>AVERAGE BATTERY</span>
+                    <h2>85%</h2>
+                    <p>Overall battery status</p>
+                </article>
+
+                <article class="kpi-card">
+                    <span>OPEN ALERTS</span>
+                    <h2>0</h2>
+                    <p>Active alerts and warnings</p>
+                </article>
+
+                <article class="kpi-card">
+                    <span>DISTANCE TRAVELLED</span>
+                    <h2>500m</h2>
+                    <p>Total distance travelled</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FLEET SECTION -->
+        <section id="fleet" class="content-section" hidden>
+
+            <div class="section-heading">
+                <h2>Rover Fleet</h2>
+                <p>View and monitor all available rover units.</p>
+            </div>
+
+            <div class="details-grid">
+
+                <article class="detail-card">
+                    <h3>Rover 01</h3>
+                    <span class="online">● Online</span>
+                    <p>Battery: 95%</p>
+                    <p>Location: Block A</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Rover 02</h3>
+                    <span class="online">● Online</span>
+                    <p>Battery: 88%</p>
+                    <p>Location: Block B</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Rover 03</h3>
+                    <span class="online">● Online</span>
+                    <p>Battery: 82%</p>
+                    <p>Location: Library</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Rover 04</h3>
+                    <span class="online">● Online</span>
+                    <p>Battery: 90%</p>
+                    <p>Location: Block C</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Rover 05</h3>
+                    <span class="online">● Online</span>
+                    <p>Battery: 75%</p>
+                    <p>Location: Parking Area</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Rover 06</h3>
+                    <span class="online">● Online</span>
+                    <p>Battery: 80%</p>
+                    <p>Location: Main Entrance</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELEMETRY SECTION -->
+        <section id="telemetry" class="content-section" hidden>
+
+            <div class="section-heading">
+                <h2>Rover Telemetry</h2>
+                <p>Monitor rover performance and sensor readings.</p>
+            </div>
+
+            <div class="details-grid">
+
+                <article class="detail-card">
+                    <h3>Battery Level</h3>
+                    <h2 class="blue-text">85%</h2>
+                    <p>Average battery percentage</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Temperature</h3>
+                    <h2 class="blue-text">32°C</h2>
+                    <p>Current rover temperature</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Speed</h3>
+                    <h2 class="blue-text">2.5 m/s</h2>
+                    <p>Average rover speed</p>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Distance</h3>
+                    <h2 class="blue-text">500m</h2>
+                    <p>Total distance travelled</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERTS SECTION -->
+        <section id="alerts" class="content-section" hidden>
+
+            <div class="section-heading">
+                <h2>System Alerts</h2>
+                <p>View rover warnings and system notifications.</p>
+            </div>
+
+            <div class="alert-card">
+
+                <div class="alert-icon">✓</div>
+
+                <div>
+                    <h3>All Systems Operational</h3>
+                    <p>No active alerts or warnings.</p>
                 </div>
-                <button class="dispatch-btn">
-                    Dispatch Mission
-                </button>
+
             </div>
-        </header>
-    </body>
+
+            <div class="alert-card">
+                <div class="alert-icon">i</div>
+                <div>
+                    <h3>System Information</h3>
+                    <p>All six rover units are currently online.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
 </html>
