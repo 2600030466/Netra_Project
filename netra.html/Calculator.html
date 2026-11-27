@@ -3,43 +3,33 @@
     <head></head>
     <body>
         <h2>Calculator</h2>
-        <input type="number" id="num1" placeholder="Enter first number" /> <br>
-        <input type="number" id="num2" placeholder="Enter second number" /> <br>
+        <input type="number" id="a" placeholder="First number" /> <br>
+        <input type="number" id="b" placeholder="Second number" /> <br>
 
-        <button onclick="addNumbers()">Add</button>
-        <button onclick="mulNumbers()">Multiply</button>
-        <button onclick="subNumbers()">Subtraction</button>
-        <button onclick="divNumbers()">Divison</button>
+        <button onclick="Calculate('+')">Addition</button>
+        <button onclick="Calculate('-')">Subtraction</button>
+        <button onclick="Calculate('*')">Multiplication</button>
+        <button onclick="Calculate('/')">Division</button>
 
-        <p id="result"></p>
+        <h3 id="result"></h3>
 
         <script>
-            function addNumbers(){
-                let a = Number(document.getElementById("num1").value);
-                let b = Number(document.getElementById("num2").value);
-                let sum = a + b;
-                document.getElementById("result").innerHTML = "Addition = " + sum;
-            }
+            function Calculate(operation){
+                let x = Number(document.getElementById("a").value);
+                let y = Number(document.getElementById("b").value);
+                
+                let result;
 
-                function mulNumbers(){
-                    let a = Number(document.getElementById("num1").value);
-                    let b = Number(document.getElementById("num2").value);
-                    let mul = a * b;
-                    document.getElementById("result").innerHTML = "Multiplication = " + mul;
+                if(operation == "+"){
+                    result = x + y;
+                }else if(operation == "-"){
+                    result = x - y;
+                }else if(operation == "*"){
+                    result = x * y;
+                }else if(operation == "/"){
+                    result = y != 0 ? x / y : "Cannot divide by zero";
                 }
-
-                function subNumbers(){
-                    let a = Number(document.getElementById("num1").value);
-                    let b = Number(document.getElementById("num2").value);
-                    let sub = a - b;
-                    document.getElementById("result").innerHTML = "Subtraction = " + sub;
-                }
-
-                function divNumbers(){
-                    let a = Number(document.getElementById("num1").value);
-                    let b = Number(document.getElementById("num2").value);
-                    let div = a / b;
-                    document.getElementById("result").innerHTML = "Multiplication = " + div;
+                    document.getElementById("result").innerHTML = operation + " : " + result;
                 }
 
             </script>
