@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2>Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter first number" /> <br>
+        <input type="number" id="num2" placeholder="Enter second number" /> <br>
+
+        <button onclick="addNumbers()">Add</button>
+        <button onclick="mulNumbers()">Multiply</button>
+        <button onclick="subNumbers()">Subtraction</button>
+        <button onclick="divNumbers()">Divison</button>
+
+        <p id="result"></p>
+
+        <script>
+            function addNumbers(){
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+                let sum = a + b;
+                document.getElementById("result").innerHTML = "Addition = " + sum;
+            }
+
+                function mulNumbers(){
+                    let a = Number(document.getElementById("num1").value);
+                    let b = Number(document.getElementById("num2").value);
+                    let mul = a * b;
+                    document.getElementById("result").innerHTML = "Multiplication = " + mul;
+                }
+
+                function subNumbers(){
+                    let a = Number(document.getElementById("num1").value);
+                    let b = Number(document.getElementById("num2").value);
+                    let sub = a - b;
+                    document.getElementById("result").innerHTML = "Subtraction = " + sub;
+                }
+
+                function divNumbers(){
+                    let a = Number(document.getElementById("num1").value);
+                    let b = Number(document.getElementById("num2").value);
+                    let div = a / b;
+                    document.getElementById("result").innerHTML = "Multiplication = " + div;
+                }
+
+            </script>
+    </body>
+</html>

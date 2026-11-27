@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart Campus Dashboard">
+    <title>Smart Campus Dashboard</title>
+    <link rel="stylesheet" href="Lab-Experiment-04.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🎓</span>
+            <h2>Smart Campus</h2>
+        </div>
+
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#clubs">Clubs</a>
+            <a href="#services">Services</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-btn"
+                aria-label="Switch to dark mode">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main id="home" class="container">
+
+        <section class="welcome">
+            <p class="welcome-label">UNIVERSITY CAMPUS PORTAL</p>
+            <h1>Welcome to Smart Campus</h1>
+            <p>
+                Stay connected with campus events, student activities,
+                announcements and university services.
+            </p>
+        </section>
+
+        <section class="dashboard">
+            <div class="section-heading">
+                <h2>Campus Dashboard</h2>
+                <span class="status">● Campus Updates</span>
+            </div>
+
+            <div class="card-container">
+
+                <!-- Card 1 -->
+                <article class="card" id="events">
+                    <div class="card-icon">📅</div>
+                    <h3>Campus Events</h3>
+                    <p>Discover upcoming university events and activities.</p>
+
+                    <div class="card-details">
+                        <p><strong>Tech Fest 2026</strong></p>
+                        <p>December 10 - 12</p>
+                        <p>Venue: University Auditorium</p>
+                    </div>
+
+                    <button class="card-btn"
+                            data-message="Upcoming Campus Events: Tech Fest 2026, December 10–12, at the University Auditorium.">
+                        View Events →
+                    </button>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card" id="clubs">
+                    <div class="card-icon">👥</div>
+                    <h3>Student Clubs</h3>
+                    <p>Explore student communities and develop your skills.</p>
+
+                    <div class="card-details">
+                        <p><strong>Available Clubs</strong></p>
+                        <p>• Coding Club</p>
+                        <p>• Robotics Club</p>
+                        <p>• Cultural Club</p>
+                    </div>
+
+                    <button class="card-btn"
+                            data-message="Student Clubs: Coding Club, Robotics Club and Cultural Club.">
+                        Explore Clubs →
+                    </button>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card announcement-card">
+                    <div class="card-icon">📢</div>
+                    <h3>Announcements</h3>
+                    <p>Stay updated with important university notifications.</p>
+
+                    <div class="card-details">
+                        <p><strong>Latest Notice</strong></p>
+                        <p>Semester registration is open.</p>
+                        <p>Check your student portal for details.</p>
+                    </div>
+
+                    <button class="card-btn"
+                            data-message="Latest Announcement: Semester registration is open. Check your student portal for details.">
+                        Read Notices →
+                    </button>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card" id="services">
+                    <div class="card-icon">🏫</div>
+                    <h3>Campus Services</h3>
+                    <p>Access essential university facilities and services.</p>
+
+                    <div class="card-details">
+                        <p><strong>Available Services</strong></p>
+                        <p>• Digital Library</p>
+                        <p>• Student Help Desk</p>
+                        <p>• Transport Services</p>
+                    </div>
+
+                    <button class="card-btn"
+                            data-message="Campus Services: Digital Library, Student Help Desk and Transport Services.">
+                        View Services →
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Information message -->
+        <div id="messageBox" class="message-box"
+             role="status" aria-live="polite">
+            Select a dashboard card to view more information.
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Smart Campus Dashboard | University Portal</p>
+        <p>Designed using Modern CSS Features</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
