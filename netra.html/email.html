@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <title>Student Registration Form</title>
+    </head>
+<body>
+    <h2>Student Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+        Username: <br/>
+       <input type="text" id="username"/>
+       <p id="usernameError" class="error"></p>
+       Password: <br/>
+       <input type="password" id="password"/>
+         <p id="passwordError" class="error"></p>
+         Email:<br/>
+       <input type="email" id="email"/>
+       <p id="emailError" class="error"></p>
+       <button type="submit">Register</button>
+    </form>
+    <p id="result"></p>
+    <script src ="email.js"></script>
+</body>
+</html>
